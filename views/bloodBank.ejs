@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>HemoGlobal</title>
+    <link rel="icon" href="/images/logo.png" type="image/x-icon">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/" style="color: #ad1010;">HemoGlobal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper bg-red p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w960">
+            <div class="card card-2">
+                <div class="card-body">
+                    <h2 class="title">Blood Bank ID: <%=data.bbid%>
+                    </h2>
+                    <h4 style="margin-bottom: 10px;">District: <%=data.district%>
+                    </h4>
+                    <h4 style="margin-bottom: 10px;">State: <%=data.state%>
+                    </h4>
+                    <table class="table">
+
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Blood Type</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Edit</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <form method="post" action="/updateQty">
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>A+</td>
+                                    <td name=>
+                                        <input id="input1" size="5" name="A+" style="width: 30px;" type="text"
+                                            placeholder="<%=data.bloodQty['A+']%>" disabled>
+                                    </td>
+                                    <td><button id="button1" style="outline: none;" type="button">edit</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>A-</td>
+                                    <td>
+                                        <input id="input2" size="5" name="A-" style="width: 30px;" type="text"
+                                            placeholder="<%=data.bloodQty['A-']%>" disabled>
+                                    </td>
+                                    <td><button id="button2" style="outline: none;" type="button">edit</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>AB+</td>
+                                    <td>
+                                        <input id="input3" size="5" name="AB+" style="width: 30px;" type="text"
+                                            placeholder="<%=data.bloodQty['AB+']%>" disabled>
+                                    </td>
+                                    <td><button id="button3" style="outline: none;" type="button">edit</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>AB-</td>
+                                    <td>
+                                        <input id="input4" size="5" name="AB-" style="width: 30px;" type="text"
+                                            placeholder="<%=data.bloodQty['AB-']%>" disabled>
+                                    </td>
+                                    <td><button id="button4" style="outline: none;" type="button">edit</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>B+</td>
+                                    <td>
+                                        <input id="input5" size="5" name="B+" style="width: 30px;" type="text"
+                                            placeholder="<%=data.bloodQty['B+']%>" disabled>
+                                    </td>
+                                    <td><button id="button5" style="outline: none;" type="button">edit</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>B-</td>
+                                    <td>
+                                        <input id="input6" size="5" name="B-" style="width: 30px;" type="text"
+                                            placeholder="<%=data.bloodQty['B-']%>" disabled>
+                                    </td>
+                                    <td><button id="button6" style="outline: none;" type="button">edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>O+</td>
+                                    <td>
+                                        <input id="input7" size="5" name="O+" style="width: 30px;" type="text"
+                                            placeholder="<%=data.bloodQty['O+']%>" disabled>
+                                    </td>
+                                    <td><button id="button7" style="outline: none;" type="button">edit</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>O-</td>
+                                    <td>
+                                        <input id="input8" size="5" name="O-" style="width: 30px;" type="text"
+                                            placeholder="<%=data.bloodQty['O-']%>" disabled>
+                                    </td>
+                                    <td><button id="button8" style="outline: none;" type="button">edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                                <td> <button id="submitbut" type="submit" disabled>Update</button>
+                            </form>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const button1 = document.getElementById("button1");
+        const button2 = document.getElementById("button2");
+        const button3 = document.getElementById("button3");
+        const button4 = document.getElementById("button4");
+        const button5 = document.getElementById("button5");
+        const button6 = document.getElementById("button6");
+        const button7 = document.getElementById("button7");
+        const button8 = document.getElementById("button8");
+        let canupdate = false;
+
+        button1.addEventListener('click', (e) => {
+
+            document.getElementById('input1').disabled = false;
+            document.getElementById('input1').style = "width: 30px; outline:auto";
+            document.getElementById("submitbut").disabled = false;
+        });
+
+        button2.addEventListener('click', (e) => {
+
+            document.getElementById('input2').disabled = false;
+            document.getElementById('input2').style = "width: 30px; outline:auto";
+            document.getElementById("submitbut").disabled = false;
+        });
+
+        button3.addEventListener('click', (e) => {
+
+            document.getElementById('input3').disabled = false;
+            document.getElementById('input3').style = "width: 30px; outline:auto";
+            document.getElementById("submitbut").disabled = false;
+        });
+
+        button4.addEventListener('click', (e) => {
+
+            document.getElementById('input4').disabled = false;
+            document.getElementById('input4').style = "width: 30px; outline:auto";
+            document.getElementById("submitbut").disabled = false;
+        });
+
+        button5.addEventListener('click', (e) => {
+
+            document.getElementById('input5').disabled = false;
+            document.getElementById('input5').style = "width: 30px; outline:auto";
+            document.getElementById("submitbut").disabled = false;
+
+        });
+        button6.addEventListener('click', (e) => {
+
+            document.getElementById('input6').disabled = false;
+            document.getElementById('input6').style = "width: 30px; outline:auto";
+            document.getElementById("submitbut").disabled = false;
+        });
+
+        button7.addEventListener('click', (e) => {
+
+            document.getElementById('input7').disabled = false;
+            document.getElementById('input7').style = "width: 30px; outline:auto";
+
+            document.getElementById("submitbut").disabled = false;
+
+        });
+
+        button8.addEventListener('click', (e) => {
+
+            document.getElementById('input8').disabled = false;
+            document.getElementById('input8').style = "width: 30px; outline:auto";
+            document.getElementById("submitbut").disabled = false;
+        });
+
+    </script>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
