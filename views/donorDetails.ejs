@@ -39,24 +39,7 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+
             </ul>
             <a href="/donorRegistration"><button class="btn btn-outline-danger my-2 my-sm-0" style="color:black">Become
                     a
@@ -65,8 +48,9 @@
     </nav>
 
 
+
     <div class="page-wrapper bg-red p-t-30 p-b-100 font-robo">
-        <% data.forEach((d)=>{%>
+        <% if (data.length==0){%>
             <div class="wrapper wrapper--w960" style="padding-bottom: 20px;">
 
                 <div class="card ">
@@ -77,15 +61,8 @@
 
 
                         <h2 class="title2">
-                            <%=d.name%>
+                            No Records found.
                         </h2>
-                        <p style="font-size: medium;"><b>Blood Group:</b>
-                            <%=d.bloodGroup%> &nbsp;<b>State:</b>
-                                <%=d.state%> &nbsp;<b>District:</b>
-                                    <%=d.district%> &nbsp;<b>Contact: +91 </b>
-                                        <%=d.phone%>
-
-                        </p>
 
 
                     </div>
@@ -93,7 +70,35 @@
                 </div>
 
             </div>
-            <% }); %>
+            <%}%>
+                <% data.forEach((d)=>{%>
+                    <div class="wrapper wrapper--w960" style="padding-bottom: 20px;">
+
+                        <div class="card ">
+
+                            <div class="card-heading"></div>
+
+                            <div class="card-body">
+
+
+                                <h2 class="title2">
+                                    <%=d.name%>
+                                </h2>
+                                <p style="font-size: medium;"><b>Blood Group:</b>
+                                    <%=d.bloodGroup%> &nbsp;<b>State:</b>
+                                        <%=d.state%> &nbsp;<b>District:</b>
+                                            <%=d.district%> &nbsp;<b>Contact: +91 </b>
+                                                <%=d.phone%>
+
+                                </p>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <% }); %>
     </div>
 
 
