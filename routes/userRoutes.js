@@ -29,6 +29,10 @@ router.post('/login', passport.authenticate('local', {
     failureFlash: true
 }));
 
+router.get('/logout', checkAuthentication, (req, res) => {
+    req.logout();
+    res.redirect('/')
+})
 router.get('/bloodBank', checkAuthentication, (req, res) => {
     const user = req.user
     console.log(user);
