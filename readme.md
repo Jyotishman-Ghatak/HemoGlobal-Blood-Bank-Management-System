@@ -32,17 +32,17 @@ node index.js
 
 ## Screen Shots
 
-####HomePage
+#### HomePage
 ![HomePage](./screenshots/HomePage2.png)
-####Donor List
+#### Donor List
 ![Donor List](./screenshots/donrolist.png)
-####Blood Bank List
+#### Blood Bank List
 ![Blood Bank List](./screenshots/bblist.png)
-####Donor Registration
+#### Donor Registration
 ![Donor Registration](./screenshots/donorregistration.png)
-####Blood Bank Login
+#### Blood Bank Login
 ![HomePage](./screenshots/bblogin.png)
-####Blood Bank Inventory Management
+#### Blood Bank Inventory Management
 ![inventory](./screenshots/inventory.png)
 
 
