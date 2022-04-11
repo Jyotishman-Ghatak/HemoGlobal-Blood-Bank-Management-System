@@ -33,7 +33,7 @@ node index.js
 ## Screen Shots
 
 #### HomePage
-![HomePage](./screenshots/HomePage.png)
+![HomePage](./screenshots/homepage.png)
 #### Donor List
 ![Donor List](./screenshots/donrolist.png)
 #### Blood Bank List
