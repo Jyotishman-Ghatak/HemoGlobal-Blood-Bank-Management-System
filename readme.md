@@ -45,6 +45,8 @@ node index.js
 #### Blood Bank Inventory Management
 ![inventory](./screenshots/inventory.png)
 
+#### Flow Chart
+![flowchart](./flowchart.jpg)
 
 
 
